@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidebar from './components/Sidebar.jsx';
+import { Sidebar } from './components';
 import { Home, Settings, SignUp } from './pages';
 
 export default function App() {
   return (
     <div>
       <Router>
-        <Sidebar/>
+        <Sidebar />
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"/sign-up"} element={<SignUp />} />

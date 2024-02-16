@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/logo.png';
+import { Logo } from '../assets/images';
 
 export default function Sidebar() {
   const location = useLocation();
@@ -11,25 +11,25 @@ export default function Sidebar() {
           <img src={Logo} alt="Logo" className='h-20'/>
         </div>
         <div 
-          className='p-14 text-lg font-thin text-gray-500'
+          className='p-14 text-lg font-thin text-gray-400'
         >
           Cart
         </div>
         <Link 
           to={'/'} 
-          className={`p-14 text-lg font-${location.pathname === '/' ? 'bold' : 'thin'} text-${location.pathname === '/' ? '' : 'gray-500'}`}
+          className={`p-14 text-lg font-${location.pathname === '/' ? 'bold' : 'thin'} text-${location.pathname === '/' ? '' : 'gray-400'}`}
         >
           Market
         </Link>
         <Link 
           // to={'/'} 
-          className='p-14 text-lg font-thin text-gray-500'
+          className='p-14 text-lg font-thin text-gray-400'
         >
           Settings
         </Link>
         <Link 
           to={'/sign-up'} 
-          className={`p-14 text-lg font-${location.pathname === '/sign-up' ? 'bold' : 'thin'} text-${location.pathname === '/sign-up' ? '' : 'gray-500'}`}
+          className={`p-14 text-lg font-${location.pathname === '/sign-up' ? 'bold' : 'thin'} text-${location.pathname === '/sign-up' ? '' : 'gray-400'}`}
         >
           Logout
         </Link>
