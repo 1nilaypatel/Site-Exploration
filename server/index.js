@@ -18,6 +18,17 @@ const __dirname = path.resolve();
 
 const app = express();
 
+const loggerMiddleware = (req, res, next) => {
+  const timestamp = new Date().toISOString();
+  const { method, url, headers } = req;
+  const accessToken = headers.authorization || 'No access token';
+
+  console.log(`[${timestamp}] ${method}: ${url}, AccessToken: "${accessToken}"`);
+  next();
+};
+
+app.use(loggerMiddleware);
+
 app.use(express.json());
 app.use(cookieParser());
 
