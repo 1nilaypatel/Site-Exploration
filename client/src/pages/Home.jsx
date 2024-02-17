@@ -10,7 +10,7 @@ export default function Home() {
     { id: 1, title: 'Complete Profile', subTitle: 'Good job!', completionText: 'Complete', btnTxt: 'Complete', btnTxt2: 'Download', completed: false },
     { id: 2, title: 'Step 1', subTitle: '5% of total amount', completionText: 'Rs 1,00,000', btnTxt: 'Pay', btnTxt2: 'Receipt', completed: false },
     { id: 3, title: 'Step 2', subTitle: '', completionText: 'Complete', btnTxt: 'Pay', btnTxt2: 'Download', completed: false },
-    { id: 4, title: 'Step 3', subTitle: 'We will get back to you in 3 months', completionText: 'Complete', btnTxt: 'Complete', btnTxt2: 'Download', completed: false },
+    { id: 4, title: 'Step 3', subTitle: 'Back to you in 3 months', completionText: 'Complete', btnTxt: 'Complete', btnTxt2: 'Download', completed: false },
     { id: 5, title: 'Step 4', subTitle: 'Enjoy your stay', completionText: 'Enjoying', btnTxt: 'Complete', btnTxt2: 'Enjoy', completed: false },
     { id: 6, title: 'Step 5', subTitle: 'Good Bye!', completionText: 'Visit again', btnTxt: 'Finish', btnTxt2: 'Do Again', completed: false },
   ]);
