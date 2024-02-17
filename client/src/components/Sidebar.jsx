@@ -21,12 +21,11 @@ export default function Sidebar() {
         >
           Market
         </Link>
-        <Link 
-          // to={'/'} 
+        <div  
           className='p-14 text-lg font-thin text-gray-400'
         >
           Settings
-        </Link>
+        </div>
         <Link 
           to={'/sign-up'} 
           className={`p-14 text-lg font-${location.pathname === '/sign-up' ? 'bold' : 'thin'} text-${location.pathname === '/sign-up' ? '' : 'gray-400'}`}
