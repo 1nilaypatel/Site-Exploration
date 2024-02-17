@@ -31,45 +31,49 @@ export default function Home() {
   };
 
   return (
-    <div className='ml-[300px] py-10 px-16 flex flex-col gap-20'>
+    <div className='ml-[70px] md:ml-[300px] py-10 px-5 lg:px-16 flex flex-col gap-10 lg:gap-20'>
       
       <section className='flex flex-row items-center justify-between'>
         <Button px={6} text="Complete Profile" onClick={scrollToTasks} />
-        <img src={Notification} alt="notification" className='h-7'/>
+        <img src={Notification} alt="notification" className='h-5 md:h-7'/>
       </section>
 
       <section className='flex flex-row items-center justify-between'>
-        <span className='text-4xl font-bold'>
+        <span className='text-2xl md:text-4xl font-bold'>
           Choose your new site
         </span>
-        <img src={Progress} alt="Progress" className='h-5' />
+        <img src={Progress} alt="Progress" className='h-5 hidden lg:inline' />
       </section>
 
-      <section className='mt-6'>
+      <section className='md:mt-6 text-xs'>
         <div className='text-gray-400 flex flex-row items-center gap-1'>
-          Market <FontAwesomeIcon icon={faAngleRight} className='h-5' /> Category 1 <FontAwesomeIcon icon={faAngleRight} className='h-5' /> Theme park site <FontAwesomeIcon icon={faAngleRight} className='h-5' />
+          Market <FontAwesomeIcon icon={faAngleRight} className='lg:h-5' /> Category 1 <FontAwesomeIcon icon={faAngleRight} className='lg:h-5' /> Theme park site <FontAwesomeIcon icon={faAngleRight} className='lg:h-5' />
         </div>
         <div>
         <img src={ThemePark} alt="notification" className='mt-7'/>
         </div>
       </section>
 
-      <section className='px-8 py-4 flex flex-row justify-between'>
-        <section className='flex flex-col gap-9 w-2/3'>
-          <div className='text-4xl font-bold'>
+      <section className='lg:px-8 lg:py-4 flex flex-col lg:flex-row lg:justify-between'>
+        <section className='flex flex-col gap-5 lg:gap-9 lg:w-2/3'>
+          <div className='text-2xl lg:text-4xl font-bold'>
             Theme Park Site
           </div>
-          <div className='flex flex-row gap-2'>
-            <img src={Location} alt="location-icon" className='h-6' />
-            <span className='text-gray-300'>
+          <div className='flex flex-row gap-2 items-center'>
+            <img src={Location} alt="location-icon" className='h-3 lg:h-6' />
+            <span className='text-gray-300 text-sm md:text-base'>
               Address of the site
             </span>
           </div>
-          <div className='flex flex-row gap-2 -mt-6'>
-            <Category imgSrc={Thunder} text="Adult rides" />
-            <Category imgSrc={Drop} text="Family rides" />
-            <Category imgSrc={Tractor} text="Restaurants" />
-            <Category imgSrc={Premium} text="Premium" />
+          <div className='flex flex-col lg:flex-row gap-1 lg:gap-2 -mt-3 lg:-mt-6'>
+            <div className='flex flex-row gap-[27px] lg:gap-2'>
+              <Category imgSrc={Thunder} text="Adult rides" />
+              <Category imgSrc={Drop} text="Family rides" />
+            </div>
+            <div className='flex flex-row gap-[20px] lg:gap-2'>
+              <Category imgSrc={Tractor} text="Restaurants" />
+              <Category imgSrc={Premium} text="Premium" />
+            </div>
           </div>
           <div className='flex flex-row gap-2 items-center border border-customBlue w-fit px-2 py-0.5 cursor-pointer'>
             <img src={TopRight} className='h-4' />
@@ -77,7 +81,7 @@ export default function Home() {
               View opportunity on polygon
             </span>
           </div>
-          <div className='flex flex-row gap-8'>
+          <div className='flex flex-col lg:flex-row gap-4 lg:gap-8'>
             <LandMetrics title="200 Acres" subTitle="Area" />
             <LandMetrics title="5 Lacks" subTitle="Starting price" />
             <LandMetrics title="10 days" subTitle="Remaining Days" />
@@ -85,7 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex flex-col gap-2 flex-grow max-w-72'>
+        <section className='flex flex-col gap-2 flex-grow max-w-auto lg:max-w-72 mt-6 lg:mt-0'>
           <Button px={0} text="Complete" onClick={scrollToTasks} />
           <div className='flex justify-end'>
             <button className='w-40 border border-customBlue text-customBlue hover:bg-customBlue hover:text-gray-100 '>
@@ -99,8 +103,8 @@ export default function Home() {
         </section>
       </section>
 
-      <section className='px-8 py-4 flex flex-row justify-between gap-5'>
-        <div className='w-1/2 flex flex-col gap-16'>
+      <section className='lg:px-8 lg:py-4 flex flex-col lg:flex-row justify-between gap-5'>
+        <div className='lg:w-1/2 flex flex-col gap-16'>
           <ContentBox title="Overview" />
           <ContentBox title="Why ?" />
           <ContentBox title="What ?" />
@@ -126,7 +130,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='w-1/2 -mt-5' ref={tasksContainerRef}>
+        <div className='lg:w-1/2 -mt-5' ref={tasksContainerRef}>
           {tasks.map(task => (
             <CompleteProfile 
               key={task.id} 

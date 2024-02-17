@@ -115,11 +115,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="max-w-sm mx-auto mt-48 p-6 lg:p-2">
-      <h1 className='text-center text-3xl mb-8'>
+    <div className="ml-[100px] w-64 lg:w-auto lg:max-w-sm lg:mx-auto mt-48 lg:p-2">
+      <h1 className='text-center text-xl lg:text-3xl mb-8'>
         Enter your details to proceed
       </h1>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 text-sm lg:text-base">
         {!isFirstClick && (
           <div className="flex flex-col gap-5">
             <input 
