@@ -34,7 +34,7 @@ export default function Home() {
     <div className='ml-[70px] md:ml-[300px] py-10 px-5 lg:px-16 flex flex-col gap-10 lg:gap-20'>
       
       <section className='flex flex-row items-center justify-between'>
-        <Button px={6} text="Complete Profile" onClick={scrollToTasks} />
+        <Button text="Complete Profile" onClick={scrollToTasks} />
         <img src={Notification} alt="notification" className='h-5 md:h-7'/>
       </section>
 
